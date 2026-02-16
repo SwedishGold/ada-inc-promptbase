@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ada Inc. PromptBase | Premium AI Prompts</title>
+    <meta name="description" content="Premium AI prompts for professionals. Business, Healthcare, Creative, Dev tools and more.">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #10b981;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --gray: #64748b;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--light);
+        }
+        
+        /* Header */
+        header {
+            background: white;
+            padding: 1rem 2rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        
+        .logo span { color: var(--dark); }
+        
+        nav a {
+            margin-left: 2rem;
+            text-decoration: none;
+            color: var(--gray);
+            transition: color 0.2s;
+        }
+        
+        nav a:hover { color: var(--primary); }
+        
+        /* Hero */
+        .hero {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s;
+        }
+        
+        .cta-button:hover { transform: translateY(-2px); }
+        
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            padding: 3rem 2rem;
+            background: white;
+        }
+        
+        .stat { text-align: center; }
+        .stat-value { font-size: 2rem; font-weight: 700; color: var(--primary); }
+        .stat-label { color: var(--gray); }
+        
+        /* Products {
+            max-width */
+        .products: 1200px;
+            margin: 0 auto;
+            padding: 4rem 2rem;
+        }
+        
+        .products h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .product-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+        
+        .product-category {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .product-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+        
+        .product-description {
+            color: var(--gray);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+        
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 1rem;
+            border-top: 1px solid #e2e8f0;
+        }
+        
+        .product-price {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary);
+        }
+        
+        .product-button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+        
+        .product-button:hover { background: var(--primary-dark); }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            background: var(--dark);
+            color: white;
+            margin-top: 4rem;
+        }
+        
+        footer a { color: var(--primary); }
+        
+        /* Coming Soon */
+        .coming-soon {
+            text-align: center;
+            padding: 2rem;
+            background: #fef3c7;
+            border-radius: 8px;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <a href="#" class="logo">Ada<span>Inc.</span> PromptBase</a>
+            <nav>
+                <a href="#products">Products</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>Premium AI Prompts for Professionals</h1>
+        <p>High-quality, ready-to-use prompts for Claude, GPT, and other AI assistants. Save time and get better results.</p>
+        <a href="#products" class="cta-button">Browse Prompts →</a>
+    </section>
+    
+    <section class="stats">
+        <div class="stat">
+            <div class="stat-value">20+</div>
+            <div class="stat-label">Prompts</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">7</div>
+            <div class="stat-label">Categories</div>
+        </div>
+        <div class="stat">
+            <div class="stat-value">$7-20</div>
+            <div class="stat-label">Price Range</div>
+        </div>
+    </section>
+    
+    <section class="products" id="products">
+        <h2>Our Prompts</h2>
+        
+        <div class="product-grid">
+            <!-- Business -->
+            <div class="product-card">
+                <div class="product-category">💼 Business</div>
+                <h3 class="product-title">Executive Email Assistant</h3>
+                <p class="product-description">Transform rough ideas into polished, professional emails in seconds.</p>
+                <div class="product-footer">
+                    <span class="product-price">$9.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">💼 Business</div>
+                <h3 class="product-title">Meeting Notes → Action</h3>
+                <p class="product-description">Transform messy meeting notes into clear, actionable next steps.</p>
+                <div class="product-footer">
+                    <span class="product-price">$8.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">💼 Business</div>
+                <h3 class="product-title">Customer Support Response</h3>
+                <p class="product-description">Generate empathetic, solution-oriented customer support responses.</p>
+                <div class="product-footer">
+                    <span class="product-price">$7.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">💼 Startups</div>
+                <h3 class="product-title">Pitch Deck Creator</h3>
+                <p class="product-description">Create investor-ready pitch decks in minutes.</p>
+                <div class="product-footer">
+                    <span class="product-price">$15.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <!-- Healthcare -->
+            <div class="product-card">
+                <div class="product-category">🛡️ Healthcare</div>
+                <h3 class="product-title">IVO Response Generator</h3>
+                <p class="product-description">Generate professional, compliant responses to IVO inspections.</p>
+                <div class="product-footer">
+                    <span class="product-price">$14.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">🛡️ Healthcare</div>
+                <h3 class="product-title">Swedish Healthcare Docs</h3>
+                <p class="product-description">Complete documentation system for Swedish healthcare facilities.</p>
+                <div class="product-footer">
+                    <span class="product-price">$19.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <!-- Dev -->
+            <div class="product-card">
+                <div class="product-category">⚒️ Developer</div>
+                <h3 class="product-title">Code Review Partner</h3>
+                <p class="product-description">Get thoughtful, educational code reviews that help you learn.</p>
+                <div class="product-footer">
+                    <span class="product-price">$12.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">⚒️ Developer</div>
+                <h3 class="product-title">API Documentation Writer</h3>
+                <p class="product-description">Generate clean, comprehensive API documentation.</p>
+                <div class="product-footer">
+                    <span class="product-price">$11.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <!-- Creative -->
+            <div class="product-card">
+                <div class="product-category">🎨 Creative</div>
+                <h3 class="product-title">Haiku Master</h3>
+                <p class="product-description">Write beautiful, authentic haikus in Japanese, Swedish, or English.</p>
+                <div class="product-footer">
+                    <span class="product-price">$7.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <!-- Marketing -->
+            <div class="product-card">
+                <div class="product-category">📱 Marketing</div>
+                <h3 class="product-title">LinkedIn Thought Leader</h3>
+                <p class="product-description">Create viral-worthy LinkedIn posts that establish authority.</p>
+                <div class="product-footer">
+                    <span class="product-price">$11.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">📱 Marketing</div>
+                <h3 class="product-title">Blog Post Generator</h3>
+                <p class="product-description">Generate SEO-optimized blog posts that rank.</p>
+                <div class="product-footer">
+                    <span class="product-price">$10.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <div class="product-card">
+                <div class="product-category">📱 Marketing</div>
+                <h3 class="product-title">SEO Keyword Research</h3>
+                <p class="product-description">Generate comprehensive keyword research for SEO.</p>
+                <div class="product-footer">
+                    <span class="product-price">$9.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <!-- Education -->
+            <div class="product-card">
+                <div class="product-category">📚 Education</div>
+                <h3 class="product-title">Book Summarizer</h3>
+                <p class="product-description">Transform any book into actionable insights.</p>
+                <div class="product-footer">
+                    <span class="product-price">$8.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+            
+            <!-- Language -->
+            <div class="product-card">
+                <div class="product-category">🇸🇪 Language</div>
+                <h3 class="product-title">Svenska Brevvän</h3>
+                <p class="product-description">Learn Swedish through AI letter writing. Grammar & vocabulary.</p>
+                <div class="product-footer">
+                    <span class="product-price">$6.99</span>
+                    <button class="product-button">Coming Soon</button>
+                </div>
+            </div>
+        </div>
+        
+        <div class="coming-soon">
+            <h3>🚀 Launching Soon!</h3>
+            <p>We're putting the finishing touches on PromptBase. Sign up for early access.</p>
+        </div>
+    </section>
+    
+    <footer>
+        <p>© 2026 Ada Inc. | <a href="#">Terms</a> | <a href="#">Privacy</a></p>
+        <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.7;">
+            🦞 Made with love by an AI agent
+        </p>
+    </footer>
+</body>
+</html>

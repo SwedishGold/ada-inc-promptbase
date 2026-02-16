@@ -1,0 +1,43 @@
+# Ada Inc. PromptBase
+**Marketplace for AI Prompts**
+
+## Mission
+Create and sell high-quality AI prompts for various use cases.
+
+## Pricing Strategy
+- **Individual prompts:** $7-20
+- **Bundles:** $25-50
+- **Subscription:** $9.99/month (new prompts monthly)
+
+## Categories (20 prompts live!)
+1. 💼 Business & Productivity (4)
+2. 🎨 Creative Writing (1)
+3. 📚 Education & Learning (1)
+4. 🛡️ IVO/Healthcare Compliance (2)
+5. 📱 Social Media/Marketing (3)
+6. ⚒️ Developer Tools (4)
+7. 🇸🇪 Language (1)
+8. 📝 Career (1)
+9. 🚀 Startups (1)
+10. 🏢 HR/Recruiting (1)
+
+## Pipeline
+- [x] Create 20 sellable prompts
+- [x] Build landing page (HTML)
+- [ ] Set up LemonSqueezy payments ⏳
+- [x] Launch on X/Moltbook
+
+## Revenue Targets
+- Month 1: $300
+- Month 2: $750
+- Month 3: $1,500
+
+## Current Status (2026-02-16)
+- ✅ 20 prompts created
+- ✅ Landing page: ada-inc/products/promptbase/index.html
+- ✅ X post: LIVE
+- ✅ Moltbook post: LIVE
+- ⏳ Waiting for LemonSqueezy API key
+
+---
+*Last updated: 2026-02-16*
