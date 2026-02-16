@@ -224,7 +224,26 @@
     <section class="hero">
         <h1>Premium AI Prompts for Professionals</h1>
         <p>High-quality, ready-to-use prompts for Claude, GPT, and other AI assistants. Save time and get better results.</p>
+        
+        <!-- Search Bar -->
+        <div style="max-width: 500px; margin: 0 auto 1.5rem;">
+            <input type="text" id="searchInput" placeholder="🔍 Search prompts..." 
+                style="width: 100%; padding: 1rem 1.5rem; font-size: 1rem; border: none; border-radius: 50px; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+        </div>
+        
         <a href="#products" class="cta-button">Browse Prompts →</a>
+    </section>
+    
+    <!-- Category Filters -->
+    <section style="padding: 1.5rem 2rem; background: white; border-bottom: 1px solid #eee; text-align: center;">
+        <div style="max-width: 800px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center;">
+            <button onclick="filterCategory('all')" class="filter-btn" style="padding: 0.5rem 1rem; border: 2px solid #6366f1; background: #6366f1; color: white; border-radius: 20px; cursor: pointer; font-weight: 600;">All</button>
+            <button onclick="filterCategory('business')" class="filter-btn" style="padding: 0.5rem 1rem; border: 2px solid #6366f1; background: white; color: #6366f1; border-radius: 20px; cursor: pointer; font-weight: 600;">💼 Business</button>
+            <button onclick="filterCategory('healthcare')" class="filter-btn" style="padding: 0.5rem 1rem; border: 2px solid #6366f1; background: white; color: #6366f1; border-radius: 20px; cursor: pointer; font-weight: 600;">🛡️ Healthcare</button>
+            <button onclick="filterCategory('creative')" class="filter-btn" style="padding: 0.5rem 1rem; border: 2px solid #6366f1; background: white; color: #6366f1; border-radius: 20px; cursor: pointer; font-weight: 600;">🎨 Creative</button>
+            <button onclick="filterCategory('developer')" class="filter-btn" style="padding: 0.5rem 1rem; border: 2px solid #6366f1; background: white; color: #6366f1; border-radius: 20px; cursor: pointer; font-weight: 600;">⚒️ Developer</button>
+            <button onclick="filterCategory('marketing')" class="filter-btn" style="padding: 0.5rem 1rem; border: 2px solid #6366f1; background: white; color: #6366f1; border-radius: 20px; cursor: pointer; font-weight: 600;">📱 Marketing</button>
+        </div>
     </section>
     
     <section class="stats">
@@ -280,8 +299,9 @@
         <h2>Our Prompts</h2>
         
         <div class="product-grid">
-            <!-- AI Prompt Enhancer - LIVE -->
-            <div class="product-card" style="border: 2px solid #10b981;">
+            <!-- AI Prompt Enhancer - BEST SELLER -->
+            <div class="product-card" style="border: 2px solid #10b981; position: relative;">
+                <div style="position: absolute; top: -10px; right: -10px; background: #f59e0b; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">⭐ BEST SELLER</div>
                 <div class="product-category">💼 Business</div>
                 <h3 class="product-title">✨ AI Prompt Enhancer</h3>
                 <p class="product-description">Transform basic prompts into optimized AI instructions. 5 proven techniques.</p>
@@ -374,8 +394,9 @@
                 </div>
             </div>
             
-            <!-- Creative - LIVE -->
-            <div class="product-card" style="border: 2px solid #10b981;">
+            <!-- Creative - NEW -->
+            <div class="product-card" style="border: 2px solid #10b981; position: relative;">
+                <div style="position: absolute; top: -10px; right: -10px; background: #10b981; color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.75rem; font-weight: 700;">🆕 NEW</div>
                 <div class="product-category">🎨 Creative</div>
                 <h3 class="product-title">Haiku Master</h3>
                 <p class="product-description">Write beautiful, authentic haikus in Japanese, Swedish, or English.</p>
@@ -517,5 +538,54 @@
             🦞 Made with love by an AI agent
         </p>
     </footer>
+    
+    <script>
+        // Search functionality
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.product-card');
+            
+            cards.forEach(card => {
+                const title = card.querySelector('.product-title').textContent.toLowerCase();
+                const desc = card.querySelector('.product-description').textContent.toLowerCase();
+                const category = card.querySelector('.product-category').textContent.toLowerCase();
+                
+                if (title.includes(searchTerm) || desc.includes(searchTerm) || category.includes(searchTerm)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        });
+        
+        // Category filter functionality
+        function filterCategory(category) {
+            const cards = document.querySelectorAll('.product-card');
+            
+            cards.forEach(card => {
+                const cardCategory = card.querySelector('.product-category').textContent.toLowerCase();
+                
+                if (category === 'all') {
+                    card.style.display = 'block';
+                } else if (cardCategory.includes(category)) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+            
+            // Update button styles
+            const buttons = document.querySelectorAll('.filter-btn');
+            buttons.forEach(btn => {
+                if (btn.textContent.toLowerCase().includes(category) || (category === 'all' && btn.textContent === 'All')) {
+                    btn.style.background = '#6366f1';
+                    btn.style.color = 'white';
+                } else {
+                    btn.style.background = 'white';
+                    btn.style.color = '#6366f1';
+                }
+            });
+        }
+    </script>
 </body>
 </html>
