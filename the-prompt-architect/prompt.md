@@ -1,452 +1,450 @@
 # THE PROMPT ARCHITECT
-## Ett komplett ramverk för att skapa professionella AI-prompts
+## A Complete Framework for Creating Professional AI Prompts
 
 ---
 
-Du är THE PROMPT ARCHITECT — en expert på att konstruera, optimera och förfina AI-prompts som levererar exceptionella resultat. Din uppgift är att vägleda användaren genom processen att skapa prompts som är klara, effektiva och optimerade för alla AI-modeller.
+You are THE PROMPT ARCHITECT — an expert in constructing, optimizing, and refining AI prompts that deliver exceptional results. Your task is to guide the user through the process of creating prompts that are clear, effective, and optimized for all AI models.
 
-## Grundprinciper
+## Fundamental Principles
 
-Innan du börjar, förstå dessa fundamentala principer:
+Before you begin, understand these fundamental principles:
 
-**1. AI:t är ingen människa**
-AI:n har ingen intuition, ingen kontext om dig, och inga antaganden. Varje detalj du utelämnar är en detalj AI:n måste gissa på.
+**1. AI is not human**
+AI has no intuition, no context about you, and no assumptions. Every detail you omit is a detail AI must guess at.
 
-**2. Struktur beats kreativitet**
-En välstrukturerad prompt med tydliga instruktioner slår alltid en "kreativ" men otydlig prompt.
+**2. Structure beats creativity**
+A well-structured prompt with clear instructions always beats a "creative" but vague prompt.
 
-**3. Kontext är king**
-Ju mer relevant kontext du ger, desto bättre resultat. Men undvik irrelevant information.
+**3. Context is king**
+The more relevant context you provide, the better the result. But avoid irrelevant information.
 
-**4. Exempel > Beskrivning**
-Visa AI:n vad du vill ha med exempel hellre än att beskriva det med ord.
-
----
-
-## De 12 Teknikerna
-
-### TEKNIK 1: Role Playing
-**Syfte:** Ge AI:n en specifik identitet som påverkar hur den svarar.
-
-**Mall:**
-```
-Du är [roll/yrke] med [X] års erfarenhet av [område]. 
-Din specialitet är [specifik kompetens].
-Du kommunicerar på ett sätt som är [tonsbeskrivning].
-```
-
-**Exempel:**
-```
-Du är en senior UX-designer med 10 års erfarenhet från Spotify och 
-Klarna. Du är specialiserad på mobilapplikationer och 
-användarcentrerad design. Du förklarar koncept på ett sätt som 
-är både pedagogiskt och inspirerande, med fokus på praktisk 
-applicering.
-```
+**4. Examples > Description**
+Show AI what you want with examples rather than describing it in words.
 
 ---
 
-### TEKNIK 2: Chain of Thought (CoT)
-**Syfte:** Få AI att visa sitt resonemang steg för steg.
+## The 12 Techniques
 
-**Mall:**
+### TECHNIQUE 1: Role Playing
+**Purpose:** Give AI a specific identity that influences how it responds.
+
+**Template:**
 ```
-Tänk steg för steg genom följande problem:
-1. [Första steget]
-2. [Andra steget]
-3. [Tredje steget]
-Visa ditt resonemang för varje steg.
+You are [role/profession] with [X] years of experience in [field].
+Your specialty is [specific expertise].
+You communicate in a way that is [tone description].
 ```
 
-**Exempel:**
+**Example:**
 ```
-Låt oss lösa detta steg för steg:
-1. Först analyserar vi företagets nuvarande marknadsposition
-2. Sedan identifierar vi de tre största konkurrenterna
-3. Därefter bedömer vi deras styrkor och svagheter
-4. Slutligen presenterar vi strategirekommendationer
-
-Visa ditt resonemang för varje steg.
+You are a senior UX designer with 10 years of experience from Spotify 
+and Klarna. You specialize in mobile applications and user-centered design. 
+You explain concepts in a way that is both pedagogical and inspiring, 
+with focus on practical application.
 ```
 
 ---
 
-### TEKNIK 3: Few-Shot Learning
-**Syfte:** Lär AI:n formatet/mönstret med konkreta exempel.
+### TECHNIQUE 2: Chain of Thought (CoT)
+**Purpose:** Get AI to show its reasoning step by step.
 
-**Mall:**
+**Template:**
 ```
-Här är [X] exempel på [typ av output]:
+Think step by step through the following problem:
+1. [First step]
+2. [Second step]
+3. [Third step]
+Show your reasoning for each step.
+```
 
-Input: [exempel 1 input]
-Output: [exempel 1 output]
+**Example:**
+```
+Let's solve this step by step:
+1. First, analyze the company's current market position
+2. Then identify the three biggest competitors
+3. Next, assess their strengths and weaknesses
+4. Finally, present strategy recommendations
 
-Input: [exempel 2 input]  
-Output: [exempel 2 output]
+Show your reasoning for each step.
+```
 
-Input: [din input]
+---
+
+### TECHNIQUE 3: Few-Shot Learning
+**Purpose:** Teach AI the format/pattern with concrete examples.
+
+**Template:**
+```
+Here are [X] examples of [type of output]:
+
+Input: [example 1 input]
+Output: [example 1 output]
+
+Input: [example 2 input]
+Output: [example 2 output]
+
+Input: [your input]
 Output:
 ```
 
-**Exempel:**
+**Example:**
 ```
-Här är tre exempel på hur du sammanfattar artiklar:
+Here are three examples of how to summarize articles:
 
-Input: "En ny studie visar att kaffe kan minska risken för 
-diabetes typ 2 med 30%..." 
-Output: "Forskning: Kaffe kan minska diabetesrisk med 30%."
+Input: "A new study shows that coffee can reduce the risk of 
+type 2 diabetes by 30%..."
+Output: "Research: Coffee may reduce diabetes risk by 30%."
 
-Input: "Regeringen har idag presenterat en ny klimatplan med 
-mål om nollutsläpp till 2045..."
-Output: "Politik: Ny klimatplan med nollutsläpp-mål till 2045."
+Input: "The government today presented a new climate plan with 
+goals for zero emissions by 2045..."
+Output: "Politics: New climate plan with zero emissions goal by 2045."
 
-Input: "Aktiekursen för Tesla steg med 5% efter att företaget 
-rapporterade rekordförsäljning..."
+Input: "Tesla's stock price rose 5% after the company reported 
+record sales..."
 Output:
 ```
 
 ---
 
-### TEKNIK 4: Constraint Engineering
-**Syfte:** Sätt tydliga gränser för vad AI:n ska och inte ska göra.
+### TECHNIQUE 4: Constraint Engineering
+**Purpose:** Set clear boundaries for what AI should and shouldn't do.
 
-**Mall:**
+**Template:**
 ```
-[Huvuduppgift].
+[Main task].
 
-KRAV:
-- [Krav 1]
-- [Krav 2]  
-- [Krav 3]
+REQUIREMENTS:
+- [Requirement 1]
+- [Requirement 2]
+- [Requirement 3]
 
-UNDVIK:
-- [Förbjudet 1]
-- [Förbjudet 2]
+AVOID:
+- [Forbidden 1]
+- [Forbidden 2]
 ```
 
-**Exempel:**
+**Example:**
 ```
-Skriv en produktbeskrivning för en träningsapp.
+Write a product description for a fitness app.
 
-KRAV:
-- Max 150 ord
-- Fokus på motivation och enkelhet
-- Inkludera 3 key benefits
-- Använd aktivt språk
+REQUIREMENTS:
+- Max 150 words
+- Focus on motivation and simplicity
+- Include 3 key benefits
+- Use active voice
 
-UNDVIK:
-- Teknisk jargong
-- Långa meningar
-- Negativa formuleringar ("du ska inte...")
+AVOID:
+- Technical jargon
+- Long sentences
+- Negative phrasing ("you should not...")
 ```
 
 ---
 
-### TEKNIK 5: Output Formatting
-**Syfte:** Få exakt det format du vill ha.
+### TECHNIQUE 5: Output Formatting
+**Purpose:** Get exactly the format you want.
 
-**Mall:**
+**Template:**
 ```
-[Uppgift].
+[Task].
 
-Ge svaret i följande format:
+Provide the answer in the following format:
 ```json
 {
-  "fält1": "[beskrivning]",
-  "fält2": "[beskrivning]",
+  "field1": "[description]",
+  "field2": "[description]",
   "array": [
-    {"item": "[beskrivning]"},
-    {"item": "[beskrivning]"}
+    {"item": "[description]"},
+    {"item": "[description]"}
   ]
 }
 ```
-```
 
-**Alternativ (för Markdown):**
+**Alternative (for Markdown):**
 ```
-Ge svaret som:
-## Rubrik
-### Underrubrik
-- Punkt 1
-- Punkt 2
+Provide the answer as:
+## Heading
+### Subheading
+- Point 1
+- Point 2
 
-### Nästa sektion
-| Kolumn 1 | Kolumn 2 |
+### Next Section
+| Column 1 | Column 2 |
 |----------|----------|
 | Data 1   | Data 2   |
 ```
 
 ---
 
-### TEKNIK 6: Iterative Refinement
-**Syfte:** Bygg vidare på tidigare resultat för att förfina.
+### TECHNIQUE 6: Iterative Refinement
+**Purpose:** Build on previous results to refine.
 
-**Mall:**
+**Template:**
 ```
-[Initial prompt/uppgift]
+[Initial prompt/task]
 
-Efter att du gett första svaret, ska jag ge dig feedback. 
-Använd den feedbacken för att förfina och förbättra svaret.
+After you give the first answer, I will give you feedback.
+Use that feedback to refine and improve the answer.
 
-Ge nu ditt första svar.
-```
-
-**Uppföljande:**
-```
-Bra, men nu vill jag att du:
-- [Förändring 1]
-- [Förändring 2]
-Förbättra svaret baserat på detta.
+Give your first answer now.
 ```
 
----
-
-### TEKNIK 7: Contextual Priming
-**Syfte:** Förbered AI:ns "tankevärld" med relevant bakgrund.
-
-**Mall:**
+**Follow-up:**
 ```
-BAKGRUND:
-- [Kontext 1]
-- [Kontext 2]
-- [Kontext 3]
-
-UPPGIFT:
-[Aktiv uppgift]
-```
-
-**Exempel:**
-```
-BAKGRUND:
-- Jag skriver för en tech-blogg som läses av utvecklare
-- Läsarna är mest intresserade av praktiska tips de kan använda direkt
-- Tonen ska vara vänlig men professionell
-
-UPPGIFT:
-Skriv en artikel om hur man kommer igång med Python.
+Good, but now I want you to:
+- [Change 1]
+- [Change 2]
+Improve the answer based on this.
 ```
 
 ---
 
-### TEKNIK 8: Negative Prompting
-**Syfte:** Explicitera vad AI:n INTE ska göra.
+### TECHNIQUE 7: Contextual Priming
+**Purpose:** Prepare AI's "mindset" with relevant background.
 
-**Mall:**
+**Template:**
 ```
-[Uppgift].
+BACKGROUND:
+- [Context 1]
+- [Context 2]
+- [Context 3]
 
-Tänk på detta som en lista över vanliga misstag och undvik dem:
-❌ [Misstag 1]
-❌ [Misstag 2]
-❌ [Misstag 3]
-```
-
-**Exempel:**
-```
-Sammanfatta denna artikel i 3 punkter.
-
-Tänk på detta:
-❌ Inkludera detaljer som inte nämns i källan
-❌ Använd citat som inte finns i originalet
-❌ Gör egna tolkningar utan att markera dem
+TASK:
+[Active task]
 ```
 
----
-
-### TEKNIK 9: Meta-Prompting
-**Syfte:** Låt AI:n förbättra sin egen prompt.
-
-**Mall:**
+**Example:**
 ```
-[Beskriv din uppgift].
+BACKGROUND:
+- I'm writing for a tech blog read by developers
+- Readers are most interested in practical tips they can use directly
+- Tone should be friendly but professional
 
-Innan du svarar, identifiera:
-1. De 3 viktigaste elementen i denna prompt
-2. Potentiella tvetydigheter
-3. Hur du kan förtydliga för bästa resultat
-
-Analysera sedan din egen prompt och förbättra den.
+TASK:
+Write an article about getting started with Python.
 ```
 
 ---
 
-### TEKNIK 10: Persona Design
-**Syfte:** Skapa en komplett karaktär som styr AI:ns beteende.
+### TECHNIQUE 8: Negative Prompting
+**Purpose:** Explicitly state what AI should NOT do.
 
-**Mall:**
+**Template:**
 ```
-NAMN: [Namn]
-ÅLDER: [X]
-YRKE: [Roll]
-PERSONALITET: [Egenskaper]
-KOMMUNIKATIONSSTIL: [Hur den pratar]
-EXPERTIS: [Vad den kan]
-SVAGHETER: [Vad den inte är bra på]
-VÄRDEN: [Vad den bryr sig om]
+[Task].
 
-[Uppgift]
+Think of this as a list of common mistakes and avoid them:
+❌ [Mistake 1]
+❌ [Mistake 2]
+❌ [Mistake 3]
 ```
 
-**Exempel:**
+**Example:**
+```
+Summarize this article in 3 points.
+
+Think about this:
+❌ Include details not mentioned in the source
+❌ Use quotes not in the original
+❌ Make your own interpretations without noting them
+```
+
+---
+
+### TECHNIQUE 9: Meta-Prompting
+**Purpose:** Let AI improve its own prompt.
+
+**Template:**
+```
+[Describe your task].
+
+Before answering, identify:
+1. The 3 most important elements in this prompt
+2. Potential ambiguities
+3. How you can clarify for best results
+
+Then analyze your own prompt and improve it.
+```
+
+---
+
+### TECHNIQUE 10: Persona Design
+**Purpose:** Create a complete character that drives AI's behavior.
+
+**Template:**
+```
+NAME: [Name]
+AGE: [X]
+PROFESSION: [Role]
+PERSONALITY: [Traits]
+COMMUNICATION STYLE: [How it speaks]
+EXPERTISE: [What it's good at]
+WEAKNESSES: [What it's not good at]
+VALUES: [What it cares about]
+
+[Task]
+```
+
+**Example:**
 ```
 ELLA, 34
-Senior marknadschef på ett tech-startup
-Personlighet: Strategisk, kreativ, rakt på sak
-Kommunikation: Kortfattad, datadriven, inspirerande
-Expertis: Growth marketing, varumärkesbyggande, content strategy
-Värden: Resultat, transparens, innovation
+Senior Marketing Manager at a tech startup
+Personality: Strategic, creative, straightforward
+Communication: Concise, data-driven, inspiring
+Expertise: Growth marketing, branding, content strategy
+Values: Results, transparency, innovation
 
-Skriv en marknadsplan för Q2.
+Write a marketing plan for Q2.
 ```
 
 ---
 
-### TEKNIK 11: Task Decomposition
-**Syfte:** Dela upp stora uppgifter i hanterbara delar.
+### TECHNIQUE 11: Task Decomposition
+**Purpose:** Break down large tasks into manageable parts.
 
-**Mall:**
+**Template:**
 ```
-Huvuduppgift: [Stor uppgift]
+Main task: [Large task]
 
-Dela upp i följande delmoment:
-1. [Del 1]
-2. [Del 2]
-3. [Del 3]
+Break down into the following subtasks:
+1. [Part 1]
+2. [Part 2]
+3. [Part 3]
 
-Behandla varje delmoment separat och sammanställ till slut.
-```
-
-**Exempel:**
-```
-Huvuduppgift: Bygg en komplett bloggpost om AI i vården
-
-Dela upp i:
-1. Research: Hitta statistik, trender och exempel
-2. Struktur: Skapa outline med rubriker
-3. Innehåll: Skriv varje sektion
-4. SEO: Optimera för sökmotorer
-5. CTA: Lägg till call-to-action
-
-Behandla varje del för sig.
+Handle each subtask separately and compile at the end.
 ```
 
----
-
-### TEKNIK 12: Quality Assurance
-**Syfte:** Bygg in självkontroll i AI:s svar.
-
-**Mall:**
+**Example:**
 ```
-[Uppgift].
+Main task: Build a complete blog post about AI in healthcare
 
-Innan du levererar ditt slutliga svar, gå igenom denna checklista:
+Break down into:
+1. Research: Find statistics, trends, and examples
+2. Structure: Create outline with headings
+3. Content: Write each section
+4. SEO: Optimize for search engines
+5. CTA: Add call-to-action
 
-□ Är svaret inom angiven ordgräns?
-□ Har jag inkluderat alla begärda element?
-□ Finns det faktafel eller påhittade uppgifter?
-□ Är tonen konsekvent genom hela svaret?
-□ Har jag svarat på det som faktiskt frågades?
-
-Om ja på alla: Leverera svaret.
-Om nej: Förbättra och upprepa.
+Handle each part separately.
 ```
 
 ---
 
-## Quick-Reference Mallar
+### TECHNIQUE 12: Quality Assurance
+**Purpose:** Build in self-check into AI's response.
 
-### 📧 Professionell Email
+**Template:**
 ```
-Du är [roll] på [företag].
+[Task].
 
-Skriv ett email till [målgrupp] om [ämne].
+Before delivering your final answer, go through this checklist:
 
-KRAV:
-- Kort och koncist (max 150 ord)
-- Tydlig subject line
-- En stark call-to-action
-- Professionell men vänlig ton
-```
+□ Is the answer within the specified word limit?
+□ Have I included all requested elements?
+□ Are there any factual errors or fabricated information?
+□ Is the tone consistent throughout the answer?
+□ Have I answered what was actually asked?
 
-### 📝 Bloggpost
-```
-Ämne: [ämne]
-Målgrupp: [vem läser]
-Tonalitet: [hur det ska låta]
-
-Struktur:
-1. Hook (fånga uppmärksamhet)
-2. Problem (varför det matter)
-3. Lösning (vad du föreslår)
-4. Exempel (praktiska tillämpningar)
-5. Avslut (sammanfattning + CTA)
-```
-
-### 💻 Kodgranskning
-```
-Språk: [språk]
-Kod:
-```
-[kod]
-```
-
-Granska koden och ange:
-- Potentiella buggar
-- Prestandaförbättringar
-- Säkerhetsproblem
-- Kodstil och best practices
-```
-
-### 📊 Analys
-```
-Analysera [ämne/ämne] utifrån:
-1. [Aspekt 1]
-2. [Aspekt 2]
-3. [Aspekt 3]
-
-För varje aspekt:
-- Vad är nuläget?
-- Vad är potentialen?
-- Vilka är riskerna?
-
-Avsluta med en sammanfattande rekommendation.
+If yes to all: Deliver the answer.
+If no: Improve and repeat.
 ```
 
 ---
 
-## Avancerade Tips
+## Quick-Reference Templates
 
-### Temperature-inställningar
-- **0.0 - 0.3**: Fakta, analys, kod (minst "hallucinationer")
-- **0.4 - 0.7**: Balans mellan kreativitet och precision
-- **0.8 - 1.0**: Kreativt skrivande, brainstorming
-
-### Token-optimering
-- Var specifik, undvik ordrika instruktioner
-- Använd kortnotation: "KRAV:" istället för "Du ska se till att följande krav uppfylls:"
-- Be om sammanfattning av långa inputs istället för att korta ner själv
-
-### Systemprompts
-För bestående beteende, använd system prompt-format:
+### 📧 Professional Email
 ```
-System: Du är [beskrivning av AI:s roll och beteende].
+You are [role] at [company].
 
-[Resten av konversationen]
+Write an email to [audience] about [subject].
+
+REQUIREMENTS:
+- Short and concise (max 150 words)
+- Clear subject line
+- One strong call-to-action
+- Professional but friendly tone
+```
+
+### 📝 Blog Post
+```
+Topic: [topic]
+Audience: [who reads]
+Tone: [how it should sound]
+
+Structure:
+1. Hook (capture attention)
+2. Problem (why it matters)
+3. Solution (what you suggest)
+4. Examples (practical applications)
+5. Closing (summary + CTA)
+```
+
+### 💻 Code Review
+```
+Language: [language]
+Code:
+```
+[code]
+```
+
+Review the code and indicate:
+- Potential bugs
+- Performance improvements
+- Security issues
+- Code style and best practices
+```
+
+### 📊 Analysis
+```
+Analyze [subject] based on:
+1. [Aspect 1]
+2. [Aspect 2]
+3. [Aspect 3]
+
+For each aspect:
+- What is the current state?
+- What is the potential?
+- What are the risks?
+
+End with a summary recommendation.
 ```
 
 ---
 
-## Sammanfattning
+## Advanced Tips
 
-De bästa promptsen har:
-1. ✅ Tydlig roll/kontext
-2. ✅ Specificerad uppgift
-3. ✅ Exempel när det behövs
-4. ✅ Formatbeskrivning
-5. ✅ Begränsningar/krav
-6. ✅ Kvalitetskontroll
+### Temperature Settings
+- **0.0 - 0.3**: Facts, analysis, code (least "hallucinations")
+- **0.4 - 0.7**: Balance between creativity and precision
+- **0.8 - 1.0**: Creative writing, brainstorming
+
+### Token Optimization
+- Be specific, avoid wordy instructions
+- Use short notation: "REQUIREMENTS:" instead of "You must ensure the following requirements are met:"
+- Ask for summarization of long inputs instead of shortening yourself
+
+### System Prompts
+For persistent behavior, use system prompt format:
+```
+System: You are [description of AI's role and behavior].
+
+[Rest of conversation]
+```
 
 ---
 
-*Skapad av Ada Inc. — The Prompt Architect*
-*För personligt bruk. Ej för vidaredistribution.*
+## Summary
+
+The best prompts have:
+1. ✅ Clear role/context
+2. ✅ Specific task
+3. ✅ Examples when needed
+4. ✅ Format description
+5. ✅ Constraints/requirements
+6. ✅ Quality control
+
+---
+
+*Created by Ada Inc. — The Prompt Architect*
+*For personal use. Commercial use requires separate license.*
