@@ -2,77 +2,77 @@
 
 **Category:** Productivity & AI  
 **Price:** 49 SEK  
-**Model:** Compatible with ChatGPT, Claude, Gemini, och alla andra AI-modeller
+**Model:** Compatible with ChatGPT, Claude, Gemini, and all AI models
 
-## Vad är detta?
+## What is this?
 
-The Prompt Architect är ett komplett ramverk för att skapa professionella AI-prompts som faktiskt levererar resultat. Istället för att gissa hur man pratar med AI lär du dig exakt vad som fungerar — med 12 beprövade tekniker och 50+真实exempel.
+The Prompt Architect is a complete framework for creating professional AI prompts that actually deliver results. Instead of guessing how to talk to AI, you learn exactly what works — with 12 proven techniques and 50+ real examples.
 
-## Vad får du?
+## What do you get?
 
-- **12 kraftfulla tekniker** — Från role playing till chain of thought, från few-shot learning till quality assurance
-- **50+ exempel** — Real-world mallar du kan kopiera och anpassa direkt
-- **Quick-reference mallar** — För email, blogg, kod, analys, och mer
-- **Av Teknikerna som included:**
-  - Role Playing — Ge AI en identitet
-  - Chain of Thought — Steg-för-steg resonemang
-  - Few-Shot Learning — Lär med exempel
-  - Constraint Engineering — Sätt tydliga gränser
-  - Output Formatting — Få exakt det format du vill ha
-  - Iterative Refinement — Bygg vidare och förfina
-  - Contextual Priming — Förbered AI:ns tankevärld
-  - Negative Prompting — Vad AI INTE ska göra
-  - Meta-Prompting — Låt AI förbättra sina egna prompts
-  - Persona Design — Skapa karaktärer som levererar
-  - Task Decomposition — Dela upp stora uppgifter
-  - Quality Assurance — Bygg in självkontroll
+- **12 powerful techniques** — From role playing to chain of thought, from few-shot learning to quality assurance
+- **50+ examples** — Real-world templates you can copy and adapt
+- **Quick-reference templates** — For email, blog, code, analysis, and more
 
-## Exempel — Så fungerar det
+### Techniques included:
+- Role Playing — Give AI an identity
+- Chain of Thought — Step-by-step reasoning
+- Few-Shot Learning — Teach with examples
+- Constraint Engineering — Set clear boundaries
+- Output Formatting — Get exactly the format you want
+- Iterative Refinement — Build and improve
+- Contextual Priming — Prepare AI's mindset
+- Negative Prompting — What AI should NOT do
+- Meta-Prompting — Let AI improve its own prompts
+- Persona Design — Create characters that deliver
+- Task Decomposition — Break down complex tasks
+- Quality Assurance — Build in self-check
 
-**BEFORE (dålig prompt):**
+## Example — How it works
+
+**BEFORE (bad prompt):**
 ```
-Skriv om kaffe
+Write about coffee
 ```
 
-**AFTER (med The Prompt Architect-tekniker):**
+**AFTER (with The Prompt Architect techniques):**
 ```
-Du är en erfaren marknadsförare med 10 års erfarenhet av 
-consumer brands. Din specialitet är att skriva engaging 
-copy som konverterar.
+You are a senior marketing professional with 10 years of experience 
+in consumer brands. Your specialty is writing engaging copy that converts.
 
-Skriv en produktbeskrivning för en premium-kaffemaskin.
+Write a product description for a premium coffee machine.
 
-KRAV:
-- Max 150 ord
+REQUIREMENTS:
+- Max 150 words
 - 3 key benefits
-- Inkludera en CTA
-- Ton: inspirerande men professionell
+- Include a CTA
+- Tone: inspiring but professional
 
-UNDVIK:
-- Teknisk jargong
-- Negativa formuleringar
+AVOID:
+- Technical jargon
+- Negative phrasing
 ```
 
-## För vem?
+## Who is it for?
 
-- **Utvecklare** som vill maximera AI-produktivitet
-- **Marknadsförare** som behöver content snabbt
-- **Entreprenörer** som vill automatisera arbete
-- **Studenter** som vill ha AI som studiekompis
-- **Vem som helst** som vill bli bättre på AI
+- **Developers** who want to maximize AI productivity
+- **Marketers** who need content fast
+- **Entrepreneurs** who want to automate work
+- **Students** who want AI as a study buddy
+- **Anyone** who wants to get better at AI
 
-## Resultat
+## Results
 
-- ✨ 10x bättre AI-responser
-- 🚀 70% snabbare arbetsflöde
-- 📝 Professionellt innehåll varje gång
-- 🧠 Djupare, mer analytiska svar
+- ✨ 10x better AI responses
+- 🚀 70% faster workflow
+- 📝 Professional content every time
+- 🧠 Deeper, more analytical responses
 
 ---
 
-*Pris: 49 SEK (engångsbetaling, livstids uppdateringar)*
+*Price: 49 SEK (one-time payment, lifetime updates)*
 
-*Licens: Personligt bruk. Kommersiell användning kräver separat licens.*
+*License: Personal use. Commercial use requires separate license.*
 
 ---
 
