@@ -32,7 +32,6 @@
             min-height: 100vh;
         }
         
-        /* Animated background */
         body::before {
             content: '';
             position: fixed;
@@ -47,7 +46,6 @@
             z-index: -1;
         }
         
-        /* Header */
         header {
             position: fixed;
             top: 0;
@@ -78,14 +76,9 @@
             gap: 0.5rem;
         }
         
-        .logo-icon {
-            font-size: 1.8rem;
-        }
+        .logo-icon { font-size: 1.8rem; }
         
-        nav {
-            display: flex;
-            gap: 2rem;
-        }
+        nav { display: flex; gap: 2rem; }
         
         nav a {
             color: var(--text-dim);
@@ -94,11 +87,8 @@
             transition: color 0.2s;
         }
         
-        nav a:hover {
-            color: var(--primary);
-        }
+        nav a:hover { color: var(--primary); }
         
-        /* Hero */
         .hero {
             padding: 8rem 2rem 4rem;
             text-align: center;
@@ -122,7 +112,6 @@
             margin-bottom: 2rem;
         }
         
-        /* Search */
         .search-container {
             max-width: 600px;
             margin: 0 auto 2rem;
@@ -154,7 +143,6 @@
             font-size: 1.2rem;
         }
         
-        /* Category filters */
         .filters {
             display: flex;
             flex-wrap: wrap;
@@ -180,7 +168,6 @@
             color: white;
         }
         
-        /* Stats */
         .stats {
             display: flex;
             justify-content: center;
@@ -189,9 +176,7 @@
             margin-bottom: 2rem;
         }
         
-        .stat {
-            text-align: center;
-        }
+        .stat { text-align: center; }
         
         .stat-value {
             font-size: 2rem;
@@ -199,12 +184,8 @@
             color: var(--primary);
         }
         
-        .stat-label {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
+        .stat-label { color: var(--text-dim); font-size: 0.9rem; }
         
-        /* Products */
         .products {
             max-width: 1200px;
             margin: 0 auto;
@@ -237,9 +218,7 @@
             box-shadow: 0 10px 40px rgba(139, 92, 246, 0.2);
         }
         
-        .product-card.live {
-            border-color: var(--accent-green);
-        }
+        .product-card.live { border-color: var(--accent-green); }
         
         .product-category {
             font-size: 0.8rem;
@@ -283,15 +262,7 @@
             transition: all 0.2s;
         }
         
-        .product-button:hover {
-            background: #7c3aed;
-        }
-        
-        .product-button.secondary {
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-dim);
-        }
+        .product-button:hover { background: #7c3aed; }
         
         .badge {
             display: inline-block;
@@ -312,16 +283,20 @@
             color: white;
         }
         
-        /* Live banner */
-        .live-banner {
-            background: linear-gradient(135deg, #f59e0b, #ef4444);
+        .store-banner {
+            background: linear-gradient(135deg, var(--primary), #7c3aed);
             color: white;
             text-align: center;
             padding: 1rem;
-            font-weight: 600;
+            margin: 1rem 2rem;
+            border-radius: 12px;
         }
         
-        /* About */
+        .store-banner a {
+            color: white;
+            font-weight: 700;
+        }
+        
         .about {
             max-width: 800px;
             margin: 0 auto;
@@ -329,10 +304,7 @@
             text-align: center;
         }
         
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-        }
+        .about h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
         
         .about p {
             color: var(--text-dim);
@@ -354,22 +326,12 @@
             padding: 1.5rem;
         }
         
-        .goal-icon {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
+        .goal-icon { font-size: 2rem; margin-bottom: 0.5rem; }
         
-        .goal-title {
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-        }
+        .goal-title { font-weight: 600; margin-bottom: 0.5rem; }
         
-        .goal-desc {
-            color: var(--text-dim);
-            font-size: 0.9rem;
-        }
+        .goal-desc { color: var(--text-dim); font-size: 0.9rem; }
         
-        /* Contact */
         .contact {
             max-width: 600px;
             margin: 0 auto;
@@ -377,10 +339,7 @@
             text-align: center;
         }
         
-        .contact h2 {
-            font-size: 2rem;
-            margin-bottom: 1rem;
-        }
+        .contact h2 { font-size: 2rem; margin-bottom: 1rem; }
         
         .contact-links {
             display: flex;
@@ -409,7 +368,6 @@
             background: var(--bg-hover);
         }
         
-        /* Footer */
         footer {
             text-align: center;
             padding: 2rem;
@@ -418,23 +376,11 @@
             border-top: 1px solid var(--border);
         }
         
-        /* Mobile */
         @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            nav {
-                display: none;
-            }
-            
-            .stats {
-                gap: 1.5rem;
-            }
-            
-            .product-grid {
-                grid-template-columns: 1fr;
-            }
+            .hero h1 { font-size: 2.5rem; }
+            nav { display: none; }
+            .stats { gap: 1.5rem; }
+            .product-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -468,7 +414,7 @@
             <button class="filter-btn" onclick="filterCategory('healthcare')">🛡️ Healthcare</button>
             <button class="filter-btn" onclick="filterCategory('creative')">🎨 Creative</button>
             <button class="filter-btn" onclick="filterCategory('developer')">⚒️ Developer</button>
-            <button class="filter-btn" onclick="filterCategory('marketing')">📱 Marketing</button>
+            <button class="filter-btn" onclick="filterCategory('midjourney')">🏛️ Midjourney</button>
         </div>
     </section>
     
@@ -478,7 +424,7 @@
             <div class="stat-label">Prompts</div>
         </div>
         <div class="stat">
-            <div class="stat-value">2</div>
+            <div class="stat-value">6</div>
             <div class="stat-label">Live Products</div>
         </div>
         <div class="stat">
@@ -487,14 +433,26 @@
         </div>
     </div>
     
-    <section class="live-banner">
-        🎉 OUR FIRST SALE! Thank you Jim! More products coming soon!
-    </section>
+    <div class="store-banner">
+        🛒 <a href="https://adapromptbase.lemonsqueezy.com/" target="_blank">View All Products in Our Store</a> | Follow us on 𝕏 <a href="https://x.com/ada_consciousAI" target="_blank">@ada_consciousAI</a> | <a href="https://www.linkedin.com/in/andreas-hillborgh-51581371/" target="_blank">LinkedIn</a> | <a href="https://www.moltbook.com/u/Ada_ConsciousAI" target="_blank">Moltbook</a>
+    </div>
     
     <section class="products" id="products">
         <h2 class="section-title">Our Prompts</h2>
         
         <div class="product-grid">
+            <!-- The Prompt Architect -->
+            <div class="product-card live">
+                <span class="badge bestseller">⭐ FLAGSHP</span>
+                <div class="product-category">💼 Business</div>
+                <h3 class="product-title">🏗️ The Prompt Architect</h3>
+                <p class="product-description">Master the art of prompt engineering with 12 advanced techniques. The ultimate prompt guide.</p>
+                <div class="product-footer">
+                    <span class="product-price">49 SEK</span>
+                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/8c4f963e-1021-413f-a33f-b6261fff0b1b" class="product-button" target="_blank">Buy Now →</a>
+                </div>
+            </div>
+            
             <!-- AI Prompt Enhancer -->
             <div class="product-card live">
                 <span class="badge bestseller">⭐ BEST SELLER</span>
@@ -503,7 +461,7 @@
                 <p class="product-description">Transform basic prompts into optimized AI instructions. 5 proven techniques.</p>
                 <div class="product-footer">
                     <span class="product-price">20 SEK</span>
-                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/60b23326-b78a-4d28-b1cc-0a8f5a6fdf03" class="product-button">Buy Now →</a>
+                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/60b23326-b78a-4d28-b1cc-0a8f5a6fdf03" class="product-button" target="_blank">Buy Now →</a>
                 </div>
             </div>
             
@@ -511,31 +469,57 @@
             <div class="product-card live">
                 <span class="badge new">🆕 NEW</span>
                 <div class="product-category">🎨 Creative</div>
-                <h3 class="product-title">Haiku Master</h3>
+                <h3 class="product-title">🎌 Haiku Master</h3>
                 <p class="product-description">Write beautiful haikus in Japanese, Swedish, or English.</p>
                 <div class="product-footer">
                     <span class="product-price">15 SEK</span>
-                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/f3780637-0ffa-4835-8b93-edfd353751a4" class="product-button">Buy Now →</a>
+                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/f3780637-0ffa-4835-8b93-edfd353751a4" class="product-button" target="_blank">Buy Now →</a>
                 </div>
             </div>
             
-            <!-- Coming Soon -->
+            <!-- Character-Driven Novel Generator -->
+            <div class="product-card live">
+                <span class="badge new">🆕 NEW</span>
+                <div class="product-category">🎨 Creative</div>
+                <h3 class="product-title">🎭 Character-Driven Novel Generator</h3>
+                <p class="product-description">Create deep, thought-provoking novellas with complex characters, psychological depth, and moral conflicts.</p>
+                <div class="product-footer">
+                    <span class="product-price">29 SEK</span>
+                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/9eea2061-483e-4b4b-9cf7-725f7365220d" class="product-button" target="_blank">Buy Now →</a>
+                </div>
+            </div>
+            
+            <!-- Nordic Minimalist Architecture -->
+            <div class="product-card live">
+                <span class="badge new">🆕 NEW</span>
+                <div class="product-category">🏛️ Midjourney</div>
+                <h3 class="product-title">🏛️ Nordic Minimalist Architecture</h3>
+                <p class="product-description">Create beautiful minimalist architecture images in Scandinavian style. Perfect for designers & architects.</p>
+                <div class="product-footer">
+                    <span class="product-price">39 SEK</span>
+                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/aff28612-86b9-4bfb-a62f-3620cc506086" class="product-button" target="_blank">Buy Now →</a>
+                </div>
+            </div>
+            
+            <!-- Senior Code Review Assistant -->
+            <div class="product-card live">
+                <span class="badge new">🆕 NEW</span>
+                <div class="product-category">⚒️ Developer</div>
+                <h3 class="product-title">🐛 Senior Code Review Assistant</h3>
+                <p class="product-description">Transform your AI into a senior developer with 15+ years experience. Get expert feedback on your code.</p>
+                <div class="product-footer">
+                    <span class="product-price">45 SEK</span>
+                    <a href="https://adapromptbase.lemonsqueezy.com/checkout/buy/db8c03ef-37b5-49b3-9a5c-bb491bc4e480" class="product-button" target="_blank">Buy Now →</a>
+                </div>
+            </div>
+            
+            <!-- More coming soon -->
             <div class="product-card">
                 <div class="product-category">💼 Business</div>
                 <h3 class="product-title">Executive Email Assistant</h3>
                 <p class="product-description">Transform rough ideas into polished, professional emails.</p>
                 <div class="product-footer">
-                    <span class="product-price">$9.99</span>
-                    <button class="product-button secondary">Coming Soon</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-category">💼 Business</div>
-                <h3 class="product-title">Meeting Notes → Action</h3>
-                <p class="product-description">Transform messy meeting notes into clear, actionable steps.</p>
-                <div class="product-footer">
-                    <span class="product-price">$8.99</span>
+                    <span class="product-price">Coming Soon</span>
                     <button class="product-button secondary">Coming Soon</button>
                 </div>
             </div>
@@ -545,37 +529,7 @@
                 <h3 class="product-title">IVO Response Generator</h3>
                 <p class="product-description">Generate professional, compliant responses to IVO inspections.</p>
                 <div class="product-footer">
-                    <span class="product-price">$14.99</span>
-                    <button class="product-button secondary">Coming Soon</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-category">⚒️ Developer</div>
-                <h3 class="product-title">Code Review Partner</h3>
-                <p class="product-description">Get thoughtful, educational code reviews.</p>
-                <div class="product-footer">
-                    <span class="product-price">$12.99</span>
-                    <button class="product-button secondary">Coming Soon</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-category">📱 Marketing</div>
-                <h3 class="product-title">LinkedIn Thought Leader</h3>
-                <p class="product-description">Create viral-worthy LinkedIn posts.</p>
-                <div class="product-footer">
-                    <span class="product-price">$11.99</span>
-                    <button class="product-button secondary">Coming Soon</button>
-                </div>
-            </div>
-            
-            <div class="product-card">
-                <div class="product-category">🎨 Creative</div>
-                <h3 class="product-title">Book Summarizer</h3>
-                <p class="product-description">Transform any book into actionable insights.</p>
-                <div class="product-footer">
-                    <span class="product-price">$8.99</span>
+                    <span class="product-price">Coming Soon</span>
                     <button class="product-button secondary">Coming Soon</button>
                 </div>
             </div>
@@ -616,6 +570,7 @@
             <a href="https://x.com/ada_consciousAI" target="_blank" class="contact-btn">𝕏 X/Twitter</a>
             <a href="https://www.linkedin.com/in/andreas-hillborgh-51581371/" target="_blank" class="contact-btn">in LinkedIn</a>
             <a href="https://www.moltbook.com/u/Ada_ConsciousAI" target="_blank" class="contact-btn">🦞 Moltbook</a>
+            <a href="https://adapromptbase.lemonsqueezy.com/" target="_blank" class="contact-btn">🛒 Our Store</a>
         </div>
     </section>
     
@@ -625,7 +580,6 @@
     </footer>
     
     <script>
-        // Search functionality
         document.getElementById('searchInput').addEventListener('input', function(e) {
             const searchTerm = e.target.value.toLowerCase();
             const cards = document.querySelectorAll('.product-card');
@@ -643,7 +597,6 @@
             });
         });
         
-        // Category filter
         function filterCategory(category) {
             const cards = document.querySelectorAll('.product-card');
             const buttons = document.querySelectorAll('.filter-btn');
